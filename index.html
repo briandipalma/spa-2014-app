@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="node_modules/traceur/bin/traceur.js"></script>
+		<!--	<script src="node_modules/traceur/bin/traceur-runtime.js"></script>	-->
+		<script src="node_modules/es6-module-loader/dist/es6-module-loader.min.js"></script>
+
+		<script>
+			System.import("src/index").then(function(module) {
+				module.printHello();
+			});
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
