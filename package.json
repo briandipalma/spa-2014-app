@@ -5,7 +5,7 @@
     "prepublish": "npm run build",
     "watch": "watchy -sw src -- npm run build",
     "build": "traceur --dir src/ out/ --modules=commonjs --sourcemap",
-    "serve" : "static -H '{\"Cache-Control\": \"no-cache, must-revalidate\"}'"
+    "serve": "static -H '{\"Cache-Control\": \"no-cache, must-revalidate\"}'"
   },
   "dependencies": {
     "traceur": "~0.0.42",
