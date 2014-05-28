@@ -9,7 +9,9 @@
   },
   "dependencies": {
     "traceur": "~0.0.42",
-    "es6-module-loader": "~0.6.0"
+    "es6-module-loader": "~0.6.0",
+    "systemjs": "^0.6.6",
+    "x-tag-core": "git://github.com/x-tag/core#0.9.7"
   },
   "devDependencies": {
     "watchy": "~0.4.4",
