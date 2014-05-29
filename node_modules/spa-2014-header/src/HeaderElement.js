@@ -1,5 +1,4 @@
-import {HeaderStore} from "./HeaderStore";
-import HeaderActions from "./HeaderActions";
+import {createStoreAndActions} from "./index";
 
 import "../style/index.css!";
 import headerTemplate from "../template/header.text!";
@@ -7,7 +6,11 @@ import headerTemplate from "../template/header.text!";
 export class HeaderElement extends HTMLElement {
 	// Fires when an instance of the HeaderElement is created
 	createdCallback() {
+		var [headerStore, headerActions] = createStoreAndActions();
+
 		this.innerHTML = headerTemplate;
+		this.headerStore = headerStore;
+		this.headerActions = headerActions;
 	}
 
 	// Fires when the instance is inserted into the document
@@ -22,7 +25,7 @@ export class HeaderElement extends HTMLElement {
 		usernameInput.addEventListener("keydown", (keyboardEvent) => this._inputKeydownListener(keyboardEvent));
 		passwordInput.addEventListener("keydown", (keyboardEvent) => this._inputKeydownListener(keyboardEvent));
 
-		HeaderStore.addChangeListener(this.headerStoreChanged, this);
+		this.headerStore.addChangeListener(this.headerStoreChanged, this);
 
 		this.headerStoreChanged();
 	}
@@ -41,7 +44,7 @@ export class HeaderElement extends HTMLElement {
 	}
 
 	headerStoreChanged() {
-		this.props = HeaderStore.getState();
+		this.props = this.headerStore.getState();
 		this.render();
 	}
 
@@ -55,10 +58,10 @@ export class HeaderElement extends HTMLElement {
 		var username = this.querySelector("#username").value;
 		var password = this.querySelector("#password").value;
 
-		HeaderActions.login(username, password);
+		this.headerActions.login(username, password);
 	}
 
 	_onLogoutClicked() {
-		HeaderActions.logout();
+		this.headerActions.logout();
 	}
 }
