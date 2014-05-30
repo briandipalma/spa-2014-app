@@ -1,0 +1,2 @@
+depends: browser-modules
+js: target/single/emitr.js
