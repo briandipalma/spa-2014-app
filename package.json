@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "prepublish": "npm run build",
+    "start": "npm run watch & npm run serve",
     "watch": "watchy -sw src -- npm run build",
     "build": "traceur --dir src/ out/ --modules=commonjs --sourcemap",
     "serve": "static -H '{\"Cache-Control\": \"no-cache, must-revalidate\"}'"
