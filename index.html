@@ -31,7 +31,7 @@
 			System
 				.import("src/index")
 				.then(function(module) {
-					module.insertApplicationElements();
+					module.registerApplicationElements();
 				})
 				.catch(function(importError) {
 					console.error(importError);
