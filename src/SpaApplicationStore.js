@@ -3,7 +3,7 @@ import {Store} from 'flux-es6';
 import SpaApplicationConstants from './SpaApplicationConstants';
 
 var applicationState = {
-	applicationStatus: ""
+	applicationStatus: "offline"
 };
 
 export default class extends Store {
