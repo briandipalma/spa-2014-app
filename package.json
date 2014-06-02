@@ -18,7 +18,8 @@
     "systemjs-text": "git://github.com/briandipalma/plugin-text",
     "spa-2014-recent-messages": "git://github.com/briandipalma/spa-2014-recent-messages",
     "spa-2014-chat-box": "git://github.com/briandipalma/spa-2014-chat-box",
-    "spa-2014-chat-panel": "git://github.com/briandipalma/spa-2014-chat-panel"
+    "spa-2014-chat-panel": "git://github.com/briandipalma/spa-2014-chat-panel",
+    "flux-es6": "git://github.com/briandipalma/flux-es6"
   },
   "devDependencies": {
     "watchy": "~0.4.4",
