@@ -1,0 +1,17 @@
+env: 
+  global: 
+  - secure: JhTobmFLBMPQoTSj2ECSji2Mj4XO8OeHr70PfYy4UHyFWX4YBxsU5UL69ZrCGkwsIXdiD/5HyOen7tsTZ+cwkRunUjsGlmAw7jUiSOjpTSvTdp8KFIAbyO1ihoL1Ufw6Nug3zbXYkdbRU0v/BYmaFlBmrK+4pPwXSKFC8B9oJiU=
+  - secure: ATImzkga+LKTdJubSQ5YqA9BonnR/6iLaZ471x79qYuAzpsv4cpGL/ub3OgY2kWYEeFISV3RlySGJI8WvEpBhIqMeA5irS0Ykuu9qYhfk47GuPfSFqX1pHrSppAWCZOk+o192Ne3Rup0JrtCu+THKAlg+vu6LRN16zwiynnNX50=
+before_script: 
+- npm install -g grunt-cli
+- git submodule update --init --recursive
+script:
+- npm test
+- npm run-script saucelabs-test
+node_js: 
+- 0.1
+branches: 
+  only: 
+  - master
+  - gh-pages
+language: node_js
