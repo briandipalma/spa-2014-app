@@ -9,18 +9,18 @@
     "serve": "static -H '{\"Cache-Control\": \"no-cache, must-revalidate\"}'"
   },
   "dependencies": {
+    "co": "~3.0.6",
     "traceur": "~0.0.42",
+    "systemjs": "~0.6.6",
     "es6-module-loader": "~0.6.0",
-    "systemjs": "^0.6.6",
     "x-tag-core": "git://github.com/x-tag/core#0.9.7",
+    "flux-es6": "git://github.com/briandipalma/flux-es6",
     "systemjs-css": "git://github.com/briandipalma/plugin-css",
-    "spa-2014-header": "git://github.com/briandipalma/spa-2014-header",
     "systemjs-text": "git://github.com/briandipalma/plugin-text",
-    "spa-2014-recent-messages": "git://github.com/briandipalma/spa-2014-recent-messages",
+    "spa-2014-header": "git://github.com/briandipalma/spa-2014-header",
     "spa-2014-chat-box": "git://github.com/briandipalma/spa-2014-chat-box",
     "spa-2014-chat-panel": "git://github.com/briandipalma/spa-2014-chat-panel",
-    "flux-es6": "git://github.com/briandipalma/flux-es6",
-    "co": "~3.0.6"
+    "spa-2014-recent-messages": "git://github.com/briandipalma/spa-2014-recent-messages"
   },
   "devDependencies": {
     "watchy": "~0.4.4",
