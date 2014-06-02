@@ -5,3 +5,7 @@ spa2014-header {
 spa2014-recent-messages {
 	display: inline-block;
 }
+
+spa-2014-app .offline {
+	visibility: hidden;
+}
