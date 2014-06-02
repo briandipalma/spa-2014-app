@@ -1,18 +1,38 @@
+import {createStoreAndActions} from "./index";
+
 import "../style/index.css!";
 import spaApplicationTemplate from "../template/spaApplication.text!";
 
-export class SpaApplicationElement extends HTMLElement {
+export default class extends HTMLElement {
 	// Fires when an instance of the SpaApplicationElement is created
 	createdCallback() {
+		var [spaApplicationStore, spaApplicationActions] = createStoreAndActions();
+
 		this.innerHTML = spaApplicationTemplate;
+		this.spaApplicationStore = spaApplicationStore;
+		this.spaApplicationActions = spaApplicationActions;
 	}
 
 	// Fires when the instance is inserted into the document
-	attachedCallback() {}
+	attachedCallback() {
+		this.mainApplicationArea = this.querySelector(".offline");
+
+		this.spaApplicationStore.addChangeListener(this.spaApplicationStoreChanged, this);
+		this.spaApplicationStoreChanged();
+	}
 
 	// Fires when the instance is removed from the document
 	detachedCallback() {}
 
 	// Fires when an attribute is added, removed, or updated
 	attributeChangedCallback(attr, oldVal, newVal) {}
+
+	render() {
+		this.mainApplicationArea.className = this.props.applicationStatus;
+	}
+
+	spaApplicationStoreChanged() {
+		this.props = this.spaApplicationStore.getState();
+		this.render();
+	}
 }
