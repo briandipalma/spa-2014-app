@@ -19,7 +19,8 @@
     "spa-2014-recent-messages": "git://github.com/briandipalma/spa-2014-recent-messages",
     "spa-2014-chat-box": "git://github.com/briandipalma/spa-2014-chat-box",
     "spa-2014-chat-panel": "git://github.com/briandipalma/spa-2014-chat-panel",
-    "flux-es6": "git://github.com/briandipalma/flux-es6"
+    "flux-es6": "git://github.com/briandipalma/flux-es6",
+    "co": "~3.0.6"
   },
   "devDependencies": {
     "watchy": "~0.4.4",
