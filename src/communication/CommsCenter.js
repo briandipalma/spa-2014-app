@@ -1,10 +1,15 @@
 import co from "co";
 
 export function loginAndInitializeApplication(userName, password) {
-	co(function *(){
-		var packageJson = yield get("package.json");
+	co(function *() {
+		var loginJson = yield get("data/login-user-pass.json");
 
-		console.log(packageJson);
+		if (loginJson === "true") {
+			var contactsJson = yield get("data/contacts-user.json");
+			var recentMessages = yield get("data/recent-messages-user.json");
+
+			console.log(contactsJson);
+		}
 	})();
 }
 
@@ -23,3 +28,7 @@ function get(url) {
 
 	return promise;
 }
+
+//Communication at start up involves getting login permission.
+//Getting a list of contacts given a username and their status.
+//Getting a list of recent messages.
