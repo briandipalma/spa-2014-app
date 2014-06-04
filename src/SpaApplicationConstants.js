@@ -1,4 +1,3 @@
 export default {
-	APPLICATION_LOADED: {},
-    APPLICATION_STATUS_CHANGED: {}
+	APPLICATION_LOADED: {}
 }
