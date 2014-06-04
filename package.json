@@ -14,7 +14,6 @@
     "systemjs": "~0.6.6",
     "customelements": "0.0.7",
     "es6-module-loader": "~0.6.0",
-    "x-tag-core": "git://github.com/x-tag/core#0.9.7",
     "flux-es6": "git://github.com/briandipalma/flux-es6",
     "systemjs-css": "git://github.com/briandipalma/plugin-css",
     "systemjs-text": "git://github.com/briandipalma/plugin-text",
