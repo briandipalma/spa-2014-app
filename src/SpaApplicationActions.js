@@ -12,10 +12,11 @@ export default class {
         });
     }
 
-    applicationStatusChanged(applicationStatus) {
-        this.spaApplicationDispatcher.handleServerAction({
-            actionType: SpaApplicationConstants.APPLICATION_STATUS_CHANGED,
-            applicationStatus: applicationStatus
-        });
-    }
+	loggedIn() {
+		this._headerActions.loggedIn();
+	}
+
+	loginError() {
+		this._headerActions.loginError();
+	}
 };
