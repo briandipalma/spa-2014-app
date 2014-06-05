@@ -1,4 +1,14 @@
-{
-	"Contact1": true,
-	"Contact2": false
-}
+[
+	["username1", {"status": "online", "messageOutstanding": "message-outstanding"}],
+	["username2", {"status": "offline", "messageOutstanding": ""}],
+	["username3", {"status": "online", "messageOutstanding": "message-outstanding"}],
+	["username4", {"status": "offline", "messageOutstanding": ""}],
+	["username5", {"status": "online", "messageOutstanding": "message-outstanding"}],
+	["username6", {"status": "offline", "messageOutstanding": ""}],
+	["username7", {"status": "online", "messageOutstanding": "message-outstanding"}],
+	["username8", {"status": "offline", "messageOutstanding": ""}],
+	["username9", {"status": "online", "messageOutstanding": "message-outstanding"}],
+	["username10", {"status": "offline", "messageOutstanding": ""}],
+	["username11", {"status": "online", "messageOutstanding": "message-outstanding"}],
+	["username12", {"status": "offline", "messageOutstanding": ""}]
+]
