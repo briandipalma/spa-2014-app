@@ -1,4 +1,4 @@
-import HeaderConstants from "./HeaderConstants";
+import {HeaderConstants} from "./HeaderConstants";
 
 export default class {
     constructor(headerDispatcher) {

@@ -3,7 +3,10 @@ spa2014-header {
     background-image: linear-gradient(#F9F9F9, #F3F3F3);
 }
 
+spa2014-header.logged-in label,
+spa2014-header.logged-in input,
 spa2014-header.no-error .error-message,
+spa2014-header.logged-in button[name="login"],
 spa2014-header.logged-out button[name="logout"] {
     visibility: hidden;
 }

@@ -1,4 +1,4 @@
-export default {
+export var HeaderConstants = {
     LOGGED_IN: {},
     LOGGING_IN: {},
     LOGGED_OUT: {},

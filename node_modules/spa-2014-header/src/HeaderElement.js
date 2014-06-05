@@ -36,6 +36,10 @@ export class HeaderElement extends HTMLElement {
 	// Fires when an attribute is added, removed, or updated
 	attributeChangedCallback(attr, oldVal, newVal) {}
 
+	get headerDispatcher() {
+		return this.headerActions.headerDispatcher;
+	}
+
 	render() {
 		var loginState = this.props.loginState;
 		var loginErrorState = this.props.loginErrorState;

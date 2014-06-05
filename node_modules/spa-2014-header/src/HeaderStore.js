@@ -1,6 +1,6 @@
 import {Store} from 'flux-es6';
 
-import HeaderConstants from "./HeaderConstants";
+import {HeaderConstants} from "./HeaderConstants";
 
 var CHANGE_EVENT = 'change';
 
