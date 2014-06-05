@@ -5,7 +5,7 @@ import SpaApplicationConstants from './SpaApplicationConstants';
 import {CommunicationService} from './communication/CommunicationService';
 
 var applicationState = {
-	applicationStatus: "offline"
+	applicationStatus: "logged-out"
 };
 
 export default class extends Store {

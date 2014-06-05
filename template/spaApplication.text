@@ -1,5 +1,5 @@
 <spa2014-header></spa2014-header>
-<div class="offline">
+<div class="logged-out">
 	<div class="chat-area">
 		<spa-2014-chat-panel></spa-2014-chat-panel>
 		<spa2014-chat-box></spa2014-chat-box>

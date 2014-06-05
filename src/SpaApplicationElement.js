@@ -15,7 +15,7 @@ export default class extends HTMLElement {
 
 	// Fires when the instance is inserted into the document
 	attachedCallback() {
-		this.mainApplicationArea = this.querySelector(".offline");
+		this.mainApplicationArea = this.querySelector("div.logged-out");
 
 		this.spaApplicationStore.addChangeListener(this.spaApplicationStoreChanged, this);
 		this.spaApplicationStoreChanged();
