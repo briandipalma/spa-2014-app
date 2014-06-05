@@ -21,6 +21,9 @@ export class CommunicationService {
 
 			var contactsJson = yield get("data/contacts-user.json");
 			var recentMessages = yield get("data/recent-messages-user.json");
+			var recentMessagesState = new Map(JSON.parse(recentMessages));
+
+			this.applicationActions.recentMessagesListArrived(recentMessagesState);
 		} else {
 			this.applicationActions.loginError();
 		}
