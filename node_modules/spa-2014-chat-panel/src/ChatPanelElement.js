@@ -2,7 +2,7 @@ import {createStoreAndActions} from "./index";
 
 import "../style/index.css!";
 
-export class ChatBoxElement extends HTMLElement {
+export class ChatPanelElement extends HTMLElement {
 	// Fires when an instance of the RecentMessagesElement is created
 	createdCallback() {
 		var [chatBoxStore, chatBoxActions] = createStoreAndActions();
