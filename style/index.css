@@ -1,11 +1,58 @@
-spa2014-header {
-	height: 150px;
+spa-2014-app {
+	display: flex;
+	flex-direction: column;
+	border: 1px solid #F3F3F3;
 }
 
-spa2014-recent-messages {
-	display: inline-block;
+spa-2014-app > div {
+	display: flex;
+	min-height: 600px;
+	justify-content: flex-end;
 }
 
-spa-2014-app .offline {
+spa-2014-app spa2014-header {
+	display: flex;
+	min-height: 120px;
+	padding-right: 80px;
+	align-items: center;
+	justify-content: flex-end;
+}
+
+spa-2014-app div.logged-out {
 	visibility: hidden;
+}
+
+spa-2014-app .chat-area {
+	display: flex;
+	min-width: 80%;
+	min-height: 500px;
+	align-self: flex-end;
+	flex-direction: column;
+	justify-content: flex-end;
+}
+
+spa-2014-app spa-2014-chat-panel {
+    min-height: 500px;
+}
+
+spa-2014-app spa2014-chat-box {
+	margin: 10px;
+	display: flex;
+	min-width: 400px;
+	min-height: 150px;
+}
+
+spa-2014-app spa2014-chat-box textarea {
+    min-width: 92%;
+    min-height: 140px;
+}
+
+spa-2014-app spa2014-chat-box button {
+	border-radius: 10px;
+	align-self: flex-start;
+}
+
+spa-2014-app spa2014-recent-messages {
+    min-width: 20%;
+    border-left: 1px solid #F3F3F3;
 }
