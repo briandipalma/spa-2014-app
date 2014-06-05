@@ -37,10 +37,13 @@ export default class extends Store {
 
 	_applicationLoaded(applicationElement) {
 		var applicationHeader = applicationElement.querySelector('spa2014-header');
+		var recentMessages = applicationElement.querySelector('spa2014-recent-messages');
 		var headerDispatcher = applicationHeader.headerDispatcher;
 		var spaApplicationActions = applicationElement.spaApplicationActions;
 
 		spaApplicationActions._headerActions = applicationHeader.headerActions;
+		spaApplicationActions._recentMessagesActions = recentMessages.recentMessagesActions;
+
 		headerDispatcher.register((payload) => this.handleDispatcherAction(payload));
 
 		this._communicationService = new CommunicationService(spaApplicationActions);
