@@ -19,4 +19,8 @@ export default class {
 	loginError() {
 		this._headerActions.loginError();
 	}
+
+	recentMessagesListArrived(recentMessagesState) {
+		this._recentMessagesActions.messageListArrived(recentMessagesState);
+	}
 };
