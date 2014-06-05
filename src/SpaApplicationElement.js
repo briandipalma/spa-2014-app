@@ -19,7 +19,8 @@ export default class extends HTMLElement {
 
 		this.spaApplicationStore.addChangeListener(this.spaApplicationStoreChanged, this);
 		this.spaApplicationStoreChanged();
-		this.spaApplicationActions.applicationLoaded(this);
+
+		window.setTimeout(() => this.spaApplicationActions.applicationLoaded(this), 120);
 	}
 
 	// Fires when the instance is removed from the document
