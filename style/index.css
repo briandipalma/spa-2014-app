@@ -56,3 +56,25 @@ spa-2014-app spa2014-recent-messages {
     min-width: 20%;
     border-left: 1px solid #F3F3F3;
 }
+
+spa-2014-app spa2014-recent-messages li {
+	list-style-type: none;
+}
+
+spa-2014-app spa2014-recent-messages .offline::before {
+	padding: 5px;
+	content: "O";
+	color: #F3F3F3;
+}
+
+spa-2014-app spa2014-recent-messages .online::before {
+	padding: 5px;
+	color: green;
+	content: "\25cf";
+}
+
+spa-2014-app spa2014-recent-messages .message-outstanding::after {
+	padding: 5px;
+	color: #FFBA10;
+	content: "\25cf";
+}
