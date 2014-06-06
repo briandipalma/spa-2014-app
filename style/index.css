@@ -14,8 +14,13 @@ spa-2014-app spa2014-header {
 	display: flex;
 	min-height: 120px;
 	padding-right: 80px;
-	align-items: center;
-	justify-content: flex-end;
+	align-items: flex-end;
+	justify-content: space-around;
+	flex-direction: column;
+}
+
+spa-2014-app spa2014-header .error-message {
+	color: red;
 }
 
 spa-2014-app div.logged-out {
