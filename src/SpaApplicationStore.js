@@ -14,7 +14,7 @@ export default class extends Store {
         return applicationState;
     }
 
-    handleDispatcherAction(payload) {
+    handleAction(payload) {
         var action = payload.action;
 
         switch (action.actionType) {
@@ -49,8 +49,8 @@ export default class extends Store {
 		spaApplicationActions._headerActions = applicationHeader.headerActions;
 		spaApplicationActions._recentMessagesActions = recentMessages.recentMessagesActions;
 
-		headerDispatcher.register((payload) => this.handleDispatcherAction(payload));
-		recentMessagesDispatcher.register((payload) => this.handleDispatcherAction(payload));
+		headerDispatcher.register((payload) => this.handleAction(payload));
+		recentMessagesDispatcher.register((payload) => this.handleAction(payload));
 
 		this._communicationService = new CommunicationService(spaApplicationActions);
 	}
