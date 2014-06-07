@@ -20,6 +20,14 @@ export default class {
 		this._headerActions.loginError();
 	}
 
+	messageArrived(userName) {
+		this._recentMessagesActions.messageArrived(userName);
+	}
+
+	userStatusChanged(userName, status) {
+		this._recentMessagesActions.messageArrived(userName, status);
+	}
+
 	recentMessagesListArrived(recentMessagesState) {
 		this._recentMessagesActions.messageListArrived(recentMessagesState);
 	}
