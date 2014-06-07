@@ -20,8 +20,7 @@ export default class extends HTMLElement {
 	attachedCallback() {
 		this.mainApplicationArea = this.querySelector("div.logged-out");
 
-		this.spaApplicationStore.addChangeListener(this.spaApplicationStoreChanged, this);
-		this.spaApplicationStoreChanged();
+		this.spaApplicationStore.addChangeListenerAndNotify(this.spaApplicationStoreChanged, this);
 
 		window.setTimeout(() => this.spaApplicationActions.applicationLoaded(this), 120);
 	}
