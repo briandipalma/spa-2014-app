@@ -10,5 +10,5 @@ export function registerApplicationElements() {
 	document.registerElement("spa2014-chat-box", ChatBoxElement);
 	document.registerElement("spa2014-chat-panel", ChatPanelElement);
 	document.registerElement("spa2014-recent-messages", RecentMessagesElement);
-	document.registerElement("spa-2014-app", SpaApplicationElement);
+	document.registerElement("spa2014-app", SpaApplicationElement);
 }
