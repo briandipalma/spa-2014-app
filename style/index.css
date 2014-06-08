@@ -1,16 +1,16 @@
-spa-2014-app {
+spa2014-app {
 	display: flex;
 	flex-direction: column;
 	border: 1px solid #F3F3F3;
 }
 
-spa-2014-app > div {
+spa2014-app > div {
 	display: flex;
 	min-height: 600px;
 	justify-content: flex-end;
 }
 
-spa-2014-app spa2014-header {
+spa2014-app spa2014-header {
 	display: flex;
 	min-height: 120px;
 	padding-right: 80px;
@@ -19,15 +19,15 @@ spa-2014-app spa2014-header {
 	flex-direction: column;
 }
 
-spa-2014-app spa2014-header .error-message {
+spa2014-app spa2014-header .error-message {
 	color: red;
 }
 
-spa-2014-app div.logged-out {
+spa2014-app div.logged-out {
 	visibility: hidden;
 }
 
-spa-2014-app .chat-area {
+spa2014-app .chat-area {
 	display: flex;
 	min-width: 80%;
 	min-height: 500px;
@@ -36,49 +36,49 @@ spa-2014-app .chat-area {
 	justify-content: flex-end;
 }
 
-spa-2014-app spa-2014-chat-panel {
+spa2014-app spa2014-chat-panel {
     min-height: 500px;
 }
 
-spa-2014-app spa2014-chat-box {
+spa2014-app spa2014-chat-box {
 	margin: 10px;
 	display: flex;
 	min-width: 400px;
 	min-height: 150px;
 }
 
-spa-2014-app spa2014-chat-box textarea {
+spa2014-app spa2014-chat-box textarea {
     min-width: 92%;
     min-height: 140px;
 }
 
-spa-2014-app spa2014-chat-box button {
+spa2014-app spa2014-chat-box button {
 	border-radius: 10px;
 	align-self: flex-start;
 }
 
-spa-2014-app spa2014-recent-messages {
+spa2014-app spa2014-recent-messages {
     min-width: 20%;
     border-left: 1px solid #F3F3F3;
 }
 
-spa-2014-app spa2014-recent-messages li {
+spa2014-app spa2014-recent-messages li {
 	list-style-type: none;
 }
 
-spa-2014-app spa2014-recent-messages .offline::before {
+spa2014-app spa2014-recent-messages .offline::before {
 	padding: 5px;
 	content: "O";
 	color: #F3F3F3;
 }
 
-spa-2014-app spa2014-recent-messages .online::before {
+spa2014-app spa2014-recent-messages .online::before {
 	padding: 5px;
 	color: green;
 	content: "\25cf";
 }
 
-spa-2014-app spa2014-recent-messages .message-outstanding::after {
+spa2014-app spa2014-recent-messages .message-outstanding::after {
 	padding: 5px;
 	color: #FFBA10;
 	content: "\25cf";
