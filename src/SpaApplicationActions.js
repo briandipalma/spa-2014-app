@@ -5,6 +5,10 @@ export default class {
         this.spaApplicationDispatcher = spaApplicationDispatcher;
     }
 
+	/**
+	 * Application actions.
+	 */
+
 	applicationLoaded(applicationElement) {
         this.spaApplicationDispatcher.handleViewAction({
             actionType: SpaApplicationConstants.APPLICATION_LOADED,
@@ -12,13 +16,25 @@ export default class {
         });
     }
 
+	/**
+	 * Header actions.
+	 */
+
 	loggedIn() {
 		this._headerActions.loggedIn();
+	}
+
+	loggedOut() {
+		this._headerActions.loggedOut();
 	}
 
 	loginError() {
 		this._headerActions.loginError();
 	}
+
+	/**
+	 * Recent messages actions.
+	 */
 
 	messageArrived(userName) {
 		this._recentMessagesActions.messageArrived(userName);
@@ -30,5 +46,17 @@ export default class {
 
 	recentMessagesListArrived(recentMessagesState) {
 		this._recentMessagesActions.messageListArrived(recentMessagesState);
+	}
+
+	/**
+	 * Chat panel actions.
+	 */
+
+	messageReceived(userName, messageData) {
+		this._chatPanelActions.messageReceived(userName, messageData);
+	}
+
+	messagesReceived(messages) {
+		this._chatPanelActions.messagesReceived(messages);
 	}
 };
