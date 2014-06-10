@@ -37,11 +37,24 @@ spa2014-app .chat-area {
 }
 
 spa2014-app spa2014-chat-panel {
+    margin: 0 1%;
+	overflow: auto;
     min-height: 500px;
+	max-height: 500px;
+}
+
+spa2014-app spa2014-chat-panel > div {
+    display: flex;
+	margin-bottom: 1%;
+}
+
+spa2014-app spa2014-chat-panel > div > div:first-child {
+    min-width: 110px;
+	max-width: 120px;
 }
 
 spa2014-app spa2014-chat-box {
-	margin: 10px;
+	margin: 1%;
 	display: flex;
 	min-width: 400px;
 	min-height: 150px;
