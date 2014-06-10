@@ -6,7 +6,7 @@
     "start": "npm run watch & npm run serve",
     "watch": "watchy -sw src -- npm run build",
     "build": "traceur --dir src/ out/ --modules=commonjs --sourcemap",
-    "serve": "static -H '{\"Cache-Control\": \"no-cache, must-revalidate\"}'"
+    "serve": "static -H \"{\\\"Cache-Control\\\": \\\"no-cache, must-revalidate\\\"}\""
   },
   "dependencies": {
     "co": "~3.0.6",
