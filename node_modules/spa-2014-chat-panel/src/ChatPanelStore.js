@@ -14,21 +14,21 @@ export default class extends Store {
 		var action = payload.action;
 
 		switch (action.actionType) {
-            case ChatPanelConstants.MESSAGE_RECEIVED:
+			case ChatPanelConstants.MESSAGE_RECEIVED:
 				messages.get(action.userName).push(action.messageData);
-                break;
-            case ChatPanelConstants.MESSAGES_RECEIVED:
-                messages = action.messages;
-                break;
-            case ChatPanelConstants.RECENT_CONVERSATION_SELECTED:
+				break;
+			case ChatPanelConstants.MESSAGES_RECEIVED:
+				messages = action.messages;
+				break;
+			case ChatPanelConstants.RECENT_CONVERSATION_SELECTED:
 				messagesFromSelectedConversation = messages.get(action.userName);
-                break;
-            default:
-                return true;
-        }
+				break;
+			default:
+				return true;
+		}
 
-        this.emitChange();
+		this.emitChange();
 
-        return true;
+		return true;
     }
 }

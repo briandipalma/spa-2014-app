@@ -17,11 +17,11 @@ export class ChatBoxElement extends HTMLElement {
 
 	// Fires when the instance is inserted into the document
 	attachedCallback() {
-		var sendButton = this.querySelector("button");
-		sendButton.addEventListener("click", () => this._sendMessage());
+		var sendButton = this.querySelector('button');
+		sendButton.addEventListener('click', () => this._sendMessage());
 
-		this._chatBoxTextArea = this.querySelector("textarea");
-		this._chatBoxTextArea.addEventListener("keydown", (keyboardEvent) => this._chatBoxKeydownListener(keyboardEvent));
+		this._chatBoxTextArea = this.querySelector('textarea');
+		this._chatBoxTextArea.addEventListener('keydown', (keyboardEvent) => this._chatBoxKeydownListener(keyboardEvent));
 
 		this.chatBoxStore.addChangeListenerAndNotify(this.chatBoxStoreChanged, this);
 	}

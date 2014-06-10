@@ -38,15 +38,15 @@ export default class extends Store {
 function messageArrived(userName) {
     var userState = recentMessages.get(userName);
     
-    if (userState.selected !== "selected") {
-        userState.messageOutstanding = "message-outstanding";
+    if (userState.selected !== 'selected') {
+        userState.messageOutstanding = 'message-outstanding';
     }
 }
 
 function messageSelected(userName) {
     var userState = recentMessages.get(userName);
 
-    userState.messageOutstanding = "";
+    userState.messageOutstanding = '';
 }
 
 function userStatusChanged(userName, status) {

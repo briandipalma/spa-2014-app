@@ -1,2 +1,2 @@
-export {RecentMessagesElement} from "./RecentMessagesElement";
-export {RecentMessagesConstants} from "./RecentMessagesConstants";
+export {RecentMessagesElement} from './RecentMessagesElement';
+export {RecentMessagesConstants} from './RecentMessagesConstants';
