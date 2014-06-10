@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "co": "~3.0.6",
-    "traceur": "~0.0.42",
+    "traceur": "~0.0.43",
     "systemjs": "~0.6.6",
     "customelements": "0.0.7",
     "es6-module-loader": "~0.6.0",
