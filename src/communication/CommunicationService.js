@@ -20,6 +20,12 @@ export class CommunicationService {
 			this.applicationActions.loggedIn();
 
 			var contactsJson = yield get("data/contacts-user.json");
+
+			var chatMessagesJson = yield get("data/chat-messages.json");
+			var chatMessages = new Map(JSON.parse(chatMessagesJson));
+
+			this.applicationActions.messagesReceived(chatMessages);
+
 			var recentMessages = yield get("data/recent-messages-user.json");
 			var recentMessagesState = new Map(JSON.parse(recentMessages));
 
