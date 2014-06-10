@@ -7,7 +7,7 @@ import SpaApplicationConstants from './SpaApplicationConstants';
 import {CommunicationService} from './communication/CommunicationService';
 
 var applicationState = {
-	applicationStatus: "logged-out"
+	applicationStatus: 'logged-out'
 };
 
 export default class extends Store {
@@ -23,13 +23,13 @@ export default class extends Store {
 				this._applicationLoaded(action.applicationElement);
                 break;
 			case HeaderConstants.LOGGED_IN:
-				applicationState.applicationStatus = "";
+				applicationState.applicationStatus = '';
                 break;
 			case HeaderConstants.LOGGING_IN:
 				this._communicationService.initializeApplication(action.username, action.password);
 				break;
 			case HeaderConstants.LOGGED_OUT:
-				applicationState.applicationStatus = "logged-out";
+				applicationState.applicationStatus = 'logged-out';
 				break;
 			case HeaderConstants.LOGGING_OUT:
 				//TODO:
