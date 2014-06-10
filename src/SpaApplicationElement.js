@@ -1,10 +1,10 @@
-import {createStoreAndActions} from "flux-es6";
+import {createStoreAndActions} from 'flux-es6';
 
-import SpaApplicationStore from "./SpaApplicationStore";
-import SpaApplicationActions from "./SpaApplicationActions";
+import SpaApplicationStore from './SpaApplicationStore';
+import SpaApplicationActions from './SpaApplicationActions';
 
-import "../style/index.css!";
-import spaApplicationTemplate from "../template/spaApplication.text!";
+import '../style/index.css!';
+import spaApplicationTemplate from '../template/spaApplication.text!';
 
 export default class extends HTMLElement {
 	// Fires when an instance of the SpaApplicationElement is created
@@ -18,7 +18,7 @@ export default class extends HTMLElement {
 
 	// Fires when the instance is inserted into the document
 	attachedCallback() {
-		this.mainApplicationArea = this.querySelector("div.logged-out");
+		this.mainApplicationArea = this.querySelector('div.logged-out');
 
 		this.spaApplicationStore.addChangeListenerAndNotify(this.spaApplicationStoreChanged, this);
 
