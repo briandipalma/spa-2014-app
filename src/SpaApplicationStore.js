@@ -11,20 +11,20 @@ var applicationState = {
 };
 
 export default class extends Store {
-    getState() {
-        return applicationState;
-    }
+	getState() {
+		return applicationState;
+	}
 
-    handleAction(payload) {
-        var action = payload.action;
+	handleAction(payload) {
+		var action = payload.action;
 
-        switch (action.actionType) {
+		switch (action.actionType) {
 			case SpaApplicationConstants.APPLICATION_LOADED:
 				this._applicationLoaded(action.applicationElement);
-                break;
+				break;
 			case HeaderConstants.LOGGED_IN:
 				applicationState.applicationStatus = '';
-                break;
+				break;
 			case HeaderConstants.LOGGING_IN:
 				this._communicationService.initializeApplication(action.username, action.password);
 				break;
@@ -33,21 +33,21 @@ export default class extends Store {
 				break;
 			case HeaderConstants.LOGGING_OUT:
 				//TODO:
-                break;
+				break;
 			case RecentMessagesConstants.MESSAGE_SELECTED:
 				this._chatPanelActions.recentConversationSelected(action.userName);
-                break;
+				break;
 			case ChatBoxConstants.SEND_MESSAGE:
 				//TODO:
 				break;
-            default:
-                return true;
-        }
+			default:
+				return true;
+		}
 
-        this.emitChange();
+		this.emitChange();
 
-        return true;
-    }
+		return true;
+	}
 
 	_applicationLoaded(applicationElement) {
 		var chatPanel = applicationElement.querySelector('spa2014-chat-panel');
