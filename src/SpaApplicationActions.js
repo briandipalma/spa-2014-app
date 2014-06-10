@@ -1,20 +1,20 @@
 import SpaApplicationConstants from './SpaApplicationConstants';
 
 export default class {
-    constructor(spaApplicationDispatcher) {
-        this.spaApplicationDispatcher = spaApplicationDispatcher;
-    }
+	constructor(spaApplicationDispatcher) {
+		this.spaApplicationDispatcher = spaApplicationDispatcher;
+	}
 
 	/**
 	 * Application actions.
 	 */
 
 	applicationLoaded(applicationElement) {
-        this.spaApplicationDispatcher.handleViewAction({
-            actionType: SpaApplicationConstants.APPLICATION_LOADED,
-            applicationElement: applicationElement
-        });
-    }
+		this.spaApplicationDispatcher.handleViewAction({
+			actionType: SpaApplicationConstants.APPLICATION_LOADED,
+			applicationElement: applicationElement
+		});
+	}
 
 	/**
 	 * Header actions.
