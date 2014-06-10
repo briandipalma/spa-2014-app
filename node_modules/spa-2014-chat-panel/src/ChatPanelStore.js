@@ -10,7 +10,7 @@ export default class extends Store {
         return messagesFromSelectedConversation;
     }
 
-    handleDispatcherAction(payload) {
+    handleAction(payload) {
 		var action = payload.action;
 
 		switch (action.actionType) {

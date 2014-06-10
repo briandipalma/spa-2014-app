@@ -1,4 +1,4 @@
-import ChatBoxConstants from './ChatBoxConstants';
+import {ChatBoxConstants} from './ChatBoxConstants';
 
 export default class {
     constructor(chatBoxDispatcher) {

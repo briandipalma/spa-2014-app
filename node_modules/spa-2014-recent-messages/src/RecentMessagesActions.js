@@ -1,4 +1,4 @@
-import RecentMessagesConstants from './RecentMessagesConstants';
+import {RecentMessagesConstants} from './RecentMessagesConstants';
 
 export default class {
     constructor(recentMessagesDispatcher) {

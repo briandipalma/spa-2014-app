@@ -23,7 +23,7 @@ export default class {
 	recentConversationSelected(userName) {
 		this.chatPanelDispatcher.handleViewAction({
 			actionType: ChatPanelConstants.RECENT_CONVERSATION_SELECTED,
-			messages: messages
+			userName: userName
 		});
 	}
 };
