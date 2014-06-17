@@ -40,8 +40,10 @@ function get(url) {
 	var xhr = new XMLHttpRequest();
 	var promise = new Promise((resolve, reject) => {
 		xhr.onreadystatechange = () => {
-			if (xhr.readyState === 4) {
+			if (xhr.readyState === 4 && xhr.status === 200) {
 				resolve(xhr.response);
+			} else if (xhr.readyState === 4 && xhr.status === 404) {
+				reject(new Error(`Requested URL (${url}) unavailable`));
 			}
 		}
 	});
