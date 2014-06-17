@@ -10,17 +10,18 @@
   },
   "dependencies": {
     "co": "~3.0.6",
-    "traceur": "~0.0.43",
-    "systemjs": "~0.6.6",
     "customelements": "0.0.7",
     "es6-module-loader": "~0.6.0",
     "flux-es6": "git://github.com/briandipalma/flux-es6",
-    "systemjs-css": "git://github.com/briandipalma/plugin-css",
-    "systemjs-text": "git://github.com/briandipalma/plugin-text",
-    "spa-2014-header": "git://github.com/briandipalma/spa-2014-header",
     "spa-2014-chat-box": "git://github.com/briandipalma/spa-2014-chat-box",
     "spa-2014-chat-panel": "git://github.com/briandipalma/spa-2014-chat-panel",
-    "spa-2014-recent-messages": "git://github.com/briandipalma/spa-2014-recent-messages"
+    "spa-2014-contacts-list": "git://github.com/briandipalma/spa-2014-contacts-list",
+    "spa-2014-header": "git://github.com/briandipalma/spa-2014-header",
+    "spa-2014-recent-messages": "git://github.com/briandipalma/spa-2014-recent-messages",
+    "systemjs": "~0.6.6",
+    "systemjs-css": "git://github.com/briandipalma/plugin-css",
+    "systemjs-text": "git://github.com/briandipalma/plugin-text",
+    "traceur": "~0.0.43"
   },
   "devDependencies": {
     "watchy": "~0.4.4",
