@@ -1,5 +1,6 @@
 <spa2014-header></spa2014-header>
 <div class="logged-out">
+	<spa2014-contacts-list></spa2014-contacts-list>
 	<div class="chat-area">
 		<spa2014-chat-panel></spa2014-chat-panel>
 		<spa2014-chat-box></spa2014-chat-box>
