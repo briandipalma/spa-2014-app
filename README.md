@@ -5,7 +5,7 @@ Topic - Workflow
 
 http://slides.com/kybernetikos/pacman#/
 
-Workshop - Integrated with other Custom Elements.
+Workshop - Integrate with other Custom Elements.
 -------------------------------------------------
 
 After completing the first part of the workshop
