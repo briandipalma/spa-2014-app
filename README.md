@@ -48,15 +48,15 @@ To start
 
 4. Integrate the latest version
 
-	We will use the `npm` package manager to link to the latest version of the `spa2014-contacts-list` package.
-	Open a cmd window, navigate to your `spa2014-contacts-list` package and enter `npm link`.
+	We will use the `npm` package manager to link to the latest version of the `spa-2014-contacts-list` package.
+	Open a cmd window, navigate to your `spa-2014-contacts-list` package and enter `npm link`.
 
 	In windows the next step needs to be run as administrator.
 
 	Open a cmd window navigate in the `spa-2014-app` directory and run `npm link spa-2014-contacts-list`.
 
-	Reloading the application will show the latest `spa2014-contacts-list` package.
+	Reloading the application will show the latest `spa-2014-contacts-list` package.
 
 A more normal workflow would have linked the two package together during development and once development was finished
-a new version of `spa2014-contacts-list` would have been released.
+a new version of `spa-2014-contacts-list` would have been released.
 For the purposes of the workshop though we wanted to focus on a Custom Element package on its own.
