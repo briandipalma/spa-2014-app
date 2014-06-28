@@ -29,7 +29,7 @@ spa2014-app div.logged-out {
 
 spa2014-app .chat-area {
 	display: flex;
-	min-width: 80%;
+	min-width: 60%;
 	min-height: 500px;
 	align-self: flex-end;
 	flex-direction: column;
