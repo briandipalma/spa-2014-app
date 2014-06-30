@@ -1,0 +1,65 @@
+function nullIterator() {
+	return null;
+}
+
+function singleValueIterator(singleValue) {
+	var atEnd = false;
+	return function() {
+		if (atEnd == false) {
+			atEnd = true;
+			return singleValue;
+		} else {
+			return null;
+		}
+	};
+}
+
+function rangeIterator(start, end) {
+	var i = 0;
+	return function() {
+		if ((start + i) <= end) {
+			return start + i++;
+		} else {
+			return null;
+		}
+	};
+}
+
+function combinedIterator(iterators) {
+	var currentIteratorIdx = 0;
+	var val;
+	return function() {
+		while (currentIteratorIdx < iterators.length && (val = iterators[currentIteratorIdx]()) === null) {
+			currentIteratorIdx++;
+		}
+
+		if (currentIteratorIdx < iterators.length) {
+			return val;
+		} else {
+			return null;
+		}
+	};
+}
+
+exports.getIterator = function getIterator(value) {
+	var type = typeof value;
+	if (value == null || value === '') {
+		return nullIterator;
+	} else if (type === 'function') {
+		// assume it is already an iterator
+		return value;
+	} else if (type === 'number') {
+		return singleValueIterator(value);
+	} else if (type === 'string') {
+		var idx = value.indexOf('-');
+		if (idx >= 0) {
+			return rangeIterator(Number(value.substring(0, idx)), Number(value.substring(idx + 1)));
+		} else {
+			return singleValueIterator(Number(value));
+		}
+	} else if (Array.isArray(value)) {
+		return combinedIterator(value.map(getIterator));
+	}
+	throw new Error("value not appropriate "+value);
+};
+
