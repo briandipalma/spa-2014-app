@@ -2,11 +2,12 @@
   "name": "spa-2014-app",
   "version": "0.0.0",
   "scripts": {
+    "serve": "server",
     "prepublish": "npm run build",
     "start": "npm run watch & npm run serve",
     "watch": "watchy -sw src -- npm run build",
     "build": "traceur --dir src/ out/ --modules=commonjs --sourcemap",
-    "serve": "static -H \"{\\\"Cache-Control\\\": \\\"no-cache, must-revalidate\\\"}\""
+    "serve-s": "static -H \"{\\\"Cache-Control\\\": \\\"no-cache, must-revalidate\\\"}\""
   },
   "dependencies": {
     "co": "~3.0.6",
