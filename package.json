@@ -24,7 +24,8 @@
     "traceur": "~0.0.43"
   },
   "devDependencies": {
-    "watchy": "~0.4.4",
-    "node-static": "~0.7.3"
+    "node-static": "~0.7.3",
+    "server": "git://github.com/briandipalma/server",
+    "watchy": "~0.4.4"
   }
 }
